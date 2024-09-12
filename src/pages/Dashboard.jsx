@@ -4,6 +4,7 @@ import RecentOrders from '../components/Recentorders'
 import RecentActivity from '../components/RecentActivity'
 import EarningStatistics from '../components/Progress'
 import ProgressChat from '../components/Progress'
+import EarningsChart from '../components/Graph'
 
 const Dashboard = () => {
   return (
@@ -36,19 +37,19 @@ const Dashboard = () => {
           </div>
 
           <div className='w-full h-auto grid grid-cols-12 gap-4 mt-5 '>
-              <div className='col-span-8 bg-white rounded-md '>
+              <div className=' col-span-12 lg:col-span-8 bg-white rounded-md '>
                   <ProgressChat />
               </div>
-              <div className=' col-span-4 bg-white rounded-md '>
-                  
+              <div className=' col-span-12 lg:col-span-4 bg-white rounded-md '>
+                  <EarningsChart/>
               </div>
 
           </div>
           <div className='w-full h-auto grid grid-cols-12 gap-4 mt-5'>
-              <div className='col-span-8 '>
+              <div className='col-span-12 lg:col-span-8 '>
                   <RecentOrders />
               </div>
-              <div className=' col-span-4 bg-white rounded-md '>
+              <div className='col-span-12 lg:col-span-4 bg-white rounded-md '>
                   <RecentActivity/>
               </div>
 

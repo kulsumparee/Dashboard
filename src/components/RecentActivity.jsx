@@ -8,7 +8,7 @@ const Activity = [
   { id: 3, time: "14:37", title: " Make deposit USD 700 to TFN", color: "border-red-500" },
   { id: 4, time: "16:50", title: " Natasha Carey liked products", text: "Allow users to like products in your WooCommerce store.", color: "border-blue-500" },
   { id: 5, time: "21:03", title: " Favoried Product", text: "Esther James have favorited product.", color: "border-orange-500" },
-  { id: 6, time: "23:07", title: " Today offers by Digitech Galaxy", text: "Offer is valid on orders of Rs.500 Or above for selected products only.", color: "border-purple-500" },
+  { id: 6, time: "23:07", title: " Today offers by Digitech Galaxy", text: "Offer is valid on orders of Rs.500 Or above for selected products.", color: "border-purple-500" },
 
 
 
@@ -16,20 +16,19 @@ const Activity = [
 
 const RecentActivity = () => {
   return (
-    <div className=' w-full p-3 rounded-md bg-white'>
+    <div className='  w-full p-3 rounded-md bg-white'>
       <h1 className='  text-lg font-semibold  pb-3'>Recent Activity</h1>
 
-      <div>
+      <div className='overflow-auto'>
         {Activity.map((data) => (
           <div>
             <div className=' flex gap-3 text-center items-center  mt-3'>
               <h1 className='  font-semibold'>{data.time}</h1>
-              <div className={`${data.color} w-5 h-5 border-[4px]  rounded-full`}></div> 
+              <div><div className={`${data.color} w-5 h-5 border-[4px]   rounded-full`}></div> </div>
               
-              <p className=' text-sm font-semibold min-w-max'>{data.title} </p>
+              <p className=' text-sm font-semibold min-w-max '>{data.title} </p>
             </div>
             <div className='flex ml-20 gap-5'>
-              {/* <div className=' bg-slate-300 w-1 h-auto rounded-full '></div> */}
               <div className=' '><p className=' text-sm '>{data.text} </p></div>
              
             </div>

@@ -11,11 +11,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Products from '../pages/Product'
 
 const SideNav = () => {
-    // const navigate = useNavigate();
 
-    // const goToProducts = () => {
-    //     navigate('/products');
-    // };
 
     return (
         <div>
@@ -35,14 +31,14 @@ const SideNav = () => {
                 <img src={imgs5} alt="dashboard" />
                 <h1 className=' text-xl md:text-lg lg:text-xl font-semibold'>Customer</h1>
             </Link>
-            <div className=' w-full  cursor-pointer flex gap-4 hover:bg-yellow-400 py-3 pl-10 md:pl-2 lg:pl-5 rounded-md '>
+            <Link to="/Categories" className=' w-full  cursor-pointer flex gap-4 hover:bg-yellow-400 py-3 pl-10 md:pl-2 lg:pl-5 rounded-md '>
                 <img src={imgs4} alt="dashboard" />
                 <h1 className=' text-xl md:text-lg lg:text-xl font-semibold'>Categories</h1>
-            </div>
-            <div className=' w-full  cursor-pointer flex gap-4 hover:bg-yellow-400 py-3 pl-10 md:pl-2 lg:pl-5 rounded-md '>
+            </Link>
+            <Link to="/Settings" className=' w-full  cursor-pointer flex gap-4 hover:bg-yellow-400 py-3 pl-10 md:pl-2 lg:pl-5 rounded-md '>
                 <img src={imgs6} alt="dashboard" />
                 <h1 className=' text-xl md:text-lg lg:text-xl font-semibold'>Settings</h1>
-            </div>
+            </Link>
             <div className=' w-full  cursor-pointer flex gap-4 hover:bg-yellow-400 py-3 pl-10 md:pl-2 lg:pl-5 rounded-md '>
                 <img src={imgs7} alt="dashboard" />
                 <h1 className=' text-xl md:text-lg lg:text-xl font-semibold'>Logout</h1>

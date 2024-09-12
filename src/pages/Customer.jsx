@@ -1,7 +1,9 @@
 import React from 'react'
 import SideNav from '../components/SideNav'
-import { Search } from '@mui/icons-material'
+import { Delete, Edit, Search } from '@mui/icons-material'
 import Button from '../components/Button'
+import Customers from "../components/CustomersData"
+import BasicPagination from '../components/Pagination'
 
 
 
@@ -40,7 +42,7 @@ const Customer = () => {
 
 
                         <div >
-                            <div className='w-full mt-7'>
+                            <div className='w-full mt-7 overflow-auto'>
                                 <table className="min-w-max w-full">
                                     <thead>
                                         <tr className=' bg-gray-200 '>
@@ -52,7 +54,51 @@ const Customer = () => {
                                             <th className='px-4 py-4 border-b'>Action</th>
                                         </tr>
                                     </thead>
-                               </table>
+
+                                    <tbody>
+                                        {
+                                            Customers && Customers.map((data, index) => (
+                                                <tr className=' w-full min-w-max border-b'>
+                                                    <td className="px-4 py-4">{data.id}</td>
+                                                    <td className=" text-left">
+                                                        <div className="flex py-4 px-4 ">
+                                                            <div className="mr-2 ">
+                                                                <img
+                                                                    className="w-10 h-10 rounded-full"
+                                                                    src={`https://i.pravatar.cc/150?img=${index + 1}`}
+                                                                    alt="avatar"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <h1 className=' text-lg font-semibold'>{data.name}</h1>
+                                                                <h1 className=' text-lg'>{data.email}</h1>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td className='px-4 py-4'>{data.phone} </td>
+                                                    <td className="px-4 py-4 ">{data.balance} </td>
+                                                    <td className=" pl-10">{data.orders} </td>
+                                                    <td className="px-4 py-4 border-b text-center justify-center items-center">
+                                                        <button className="gap-2 flex items-center px-2 rounded-lg pb-1">
+                                                            <span className='bg-slate-200 px-1 py-1 rounded-md'> <Edit /></span>
+                                                            <span className='bg-slate-200 px-1 py-1 rounded-md'> <Delete /></span>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                            )
+
+
+                                            )
+                                        }
+
+                                    </tbody>
+                                </table>
+                                <div className=' mt-10  flex flex-col items-center gap-y-4'>
+                                    <BasicPagination />
+                                    <h1>1 – 20 of 300+ properties found</h1>
+
+                                </div>
 
                             </div>
 

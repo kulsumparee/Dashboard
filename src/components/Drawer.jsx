@@ -19,7 +19,7 @@ const DrawerComp = () => {
     };
     return (
         <>
-            <Space className=''>
+            <Space>
                 <Radio.Group value={placement} onChange={onChange}>
                     
                 </Radio.Group>
@@ -28,12 +28,15 @@ const DrawerComp = () => {
                 </Button>
             </Space>
             <Drawer
-               
+                width={300}
                 placement={placement}
-                closable={false}
+                closable={true}
                 onClose={onClose}
                 open={open}
                 key={placement}
+                footer={true}
+               
+                
             >
                 <div>
                    <SideNav/>

@@ -6,7 +6,9 @@ export default function BasicPagination() {
   return (
     <Stack spacing={2}>
      
-          <Pagination count={10} color='warning' size="large"/>
+      <div className=' min-w-max flex justify-center'>
+        <Pagination count={10} color='warning' size="large" />
+       </div>
              
      
     </Stack>

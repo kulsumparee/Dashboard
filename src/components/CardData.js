@@ -29,7 +29,6 @@ const Carddata = [
         para1: "Customer",
         para2: "90+ New Customer",
         text1: "583.35M",
-       
         icon: image3,
 
     },
