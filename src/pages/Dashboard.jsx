@@ -2,7 +2,6 @@ import React from 'react'
 import Carddata from '../components/CardData'
 import RecentOrders from '../components/Recentorders'
 import RecentActivity from '../components/RecentActivity'
-import EarningStatistics from '../components/Progress'
 import ProgressChat from '../components/Progress'
 import EarningsChart from '../components/Graph'
 

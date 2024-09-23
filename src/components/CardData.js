@@ -19,8 +19,7 @@ const Carddata = [
         id: 2,
         para1: "Order",
         para2: "40+ New Order",
-        text1: "66,894",
-       
+        text1: "66,894", 
         icon: image2,
 
     },
